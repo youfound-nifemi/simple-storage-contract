@@ -18,6 +18,6 @@ contract SimpleStorageTest is Test {
 
     function testSetValue() public {
         storageContract.set(100);
-        assertEq(storageContract.get(), 100);
+            assertEq(storageContract.get(), 100);
     }
 }
