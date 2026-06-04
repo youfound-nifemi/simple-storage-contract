@@ -7,17 +7,17 @@ import "../src/SimpleStorage.sol";
 contract SimpleStorageTest is Test {
     SimpleStorage storageContract;
 
-    function setUp() public  {
+    function setUp() public {
         storageContract = new SimpleStorage();
     }
 
     function testInitialValueIsZero() public view {
-     uint256 value = storageContract.get();
-     assertEq(value, 0);
+        uint256 value = storageContract.get();
+        assertEq(value, 0);
     }
 
     function testSetValue() public {
-    storageContract.set(100);
-    assertEq(storageContract.get(), 100);
+        storageContract.set(100);
+        assertEq(storageContract.get(), 100);
     }
 }
